@@ -1,11 +1,15 @@
 body{
     display: grid;
     grid-template-columns: repeat(1fr,3);
-    grid-template-rows: 100vh 50vh 50vh;
-    grid-area: "header header header"
+    grid-template-rows: 100vh 50vh 30vh;
+    grid-template-areas: "header header header"
                 "main main main"
-                "footer footer footer";
+                "footer1 footer2 footer3";
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
 }
+
 
 header{
     background-color: white;
@@ -16,10 +20,50 @@ header{
     justify-content: center;
     background-image: url(https://www.surfertoday.com/images/stories/beach-sunset.jpg);
     background-size: cover;
+    padding: 50px;
 }
 
 button{
-    background-color: transparent;
+    background-color: rgba(223, 223, 223, 0.688);
     border: 2px solid white;
-    padding: 10px 18px;
+    border-radius: 5px;
+    padding: 5px 15px;
+    
+}
+
+button:hover{
+    background-color: transparent;
+    cursor: pointer;
+    
+}
+
+main{
+    grid-area: main;
+    
+}
+
+.dark-color{
+    background-color: #926239;
+    color: white;
+}
+
+article{
+    padding: 15px;
+    
+}
+
+div{
+    padding: 20px;
+}
+
+.footer-left{
+    grid-area: footer1;
+}
+
+.footer-center{
+    grid-area:footer2; 
+}
+
+.footer-right{
+    grid-area: footer3;
 }
